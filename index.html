@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <h1 class="cool-heading">spli</h1>
+  <h1 class="cool-heading">tter</h1>
+  <div class="bill-container">
+    <p class="grey-heading">Bill</p>
+    <label for="bill-input"></label>
+    <input type="text">
+  </div>
+  <p class="grey-heading">Select Tip %</p>
+  <div class="flex-container">
+    <div class="flex-item">
+      <button class="percentage">5%</button>
+    </div>
+    <div class="flex-item">
+      <button class="percentage">15%</button>
+    </div>
+    <div class="flex-item">
+      <button class="percentage">25%</button>
+    </div>
+    <div class="flex-item">
+      <button class="percentage">50%</button>
+    </div>
+    <div class="flex-item">
+      <button class="percentage">Custom</button>
+    </div>
+  </div>
+  <div class="num-people-container">
+    <p class="grey-heading">Number of People</p>
+    <label for="people"></label>
+    <input type="number">
+  </div>
+  <div class="results-container">
+    <div class="result">
+      <p>Tip Amount / <span class="sm-txt">person</span></p>
+      <span class="tip-amount"></span>
+    </div>
+    <div class="result">
+      <p>Total / <span class="sm-txt">person</span></p>
+      <span class="total"></span>
+    </div>
+    <button class="reset">Reset</button>
+  </div>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
