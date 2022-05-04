@@ -83,16 +83,22 @@ label img{
 }
 
 /* flex container CSS */
-.flex-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 150px);
     grid-gap: 15px;
+    justify-content: center;
     width: 100%;
+    text-align: center;
     margin-bottom: 25px;
 }
 
-.flex-item button{
-    width: 100%;
+.grid-item {
+    position: relative;
+}
+
+.grid-item button{
+    width: 90%;
     background-color: hsl(183, 100%, 15%);
     border: none;
     font-size: 24px;
@@ -102,15 +108,41 @@ label img{
     font-family: inherit;
 }
 
-button.custom-btn {
+.grid-item button:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+
+button#custom-btn {
     background-color: hsl(180, 53%, 93%);
     color: hsl(186, 14%, 43%);
+}
+
+.custom-amount-container {
+    grid-column: 1 / span 2;
+    display: none;
+}
+
+.toggle-selected {
+    background-color: hsl(172, 67%, 45%) !important;
+    color: black !important;
+}
+
+.toggle-custom-amount-container {
+    display: block;
+}
+
+.symbol {
+    position: absolute;
+    top: 21%;
+    right: 30%;
+    color: white;
+    font-size: 1.25rem;
 }
 
 /* tip amount and results CSS */
 .results-container {
     background-color: hsl(183, 100%, 15%);
-    padding: 35px 15px 15px;
+    padding: 35px 20px 15px;
     margin-top: 25px;
     border-radius: 15px;
 }
@@ -136,7 +168,21 @@ button.custom-btn {
     color: hsl(186, 14%, 43%);
 }
 
+/* reset button CSS */
+.reset {
+    width: 100%;
+    padding: 10px 0;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 3px;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    border: none;
+}
+
 .attribution {
     font-size: .75rem;
     margin-top: 40px;
 }
+

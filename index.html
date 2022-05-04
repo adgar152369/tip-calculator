@@ -22,45 +22,57 @@
       <p class="grey-heading">Bill</p>
       <div class="input-container">
         <label for="bill-input"><img src="images/icon-dollar.svg" alt=""></label>
-        <input type="text">
+        <input id="bill-input" type="text" placeholder="0.0">
       </div>
     </div>
     <p class="grey-heading sm-heading">Select Tip %</p>
-    <div class="flex-container">
-      <div class="flex-item">
-        <button class="percentage">5%</button>
+    <div class="grid-container">
+      <div class="grid-item">
+        <button class="percentage" id="five-percent">5</button>
+        <p class="symbol">%</p>
       </div>
-      <div class="flex-item">
-        <button class="percentage">10%</button>
+      <div class="grid-item">
+        <button class="percentage" id="ten-percent">10</button>
+        <p class="symbol">%</p>
       </div>
-      <div class="flex-item">
-        <button class="percentage">15%</button>
+      <div class="grid-item">
+        <button class="percentage" id="fifteen-percent">15</button>
+        <p class="symbol">%</p>
       </div>
-      <div class="flex-item">
-        <button class="percentage">25%</button>
+      <div class="grid-item">
+        <button class="percentage" id="twentyfive-percent">25</button>
+        <p class="symbol">%</p>
       </div>
-      <div class="flex-item">
-        <button class="percentage">50%</button>
+      <div class="grid-item">
+        <button class="percentage" id="fifty-percent">50</button>
+        <p class="symbol">%</p>
       </div>
-      <div class="flex-item">
-        <button class="percentage custom-btn">Custom</button>
+      <div class="grid-item">
+        <button id="custom-btn">Custom</button>
+      </div>
+      <div class="custom-amount-container">
+        <p class="grey-heading sm-heading">Custom Tip</p>
+        <div class="input-container">
+          <label for="custom-amount"><img src="images/icon-dollar.svg" alt=""></label>
+          <input type="text" placeholder="0.0">
+        </div>
       </div>
     </div>
     <div class="num-people-container">
       <p class="grey-heading sm-heading">Number of People</p>
       <div class="input-container">
-        <label for="people"><img src="images/icon-person.svg" alt=""></label>
-        <input type="number">
+        <label for="people-input"><img src="images/icon-person.svg" alt=""></label>
+        <input id="people-input" type="number" placeholder="0">
       </div>
     </div>
     <div class="results-container">
       <div class="result">
         <p>Tip Amount <br><span class="sm-txt">/ person</span></p>
-        <span id="tip" class="amount">$5.00</span>
+        <span id="tip" class="amount"></span>
       </div>
       <div class="result">
         <p>Total <br><span class="sm-txt">/ person</span></p>
-        <span id="total" class="amount">$300</span>
+        <span id="total" class="amount"></span>
       </div>
       <button class="reset">Reset</button>
     </div>
