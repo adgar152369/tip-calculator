@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+
+/* base elements and header CSS */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +23,58 @@ header {
 
 .cool-heading {
     text-transform: uppercase;
-    letter-spacing: .45rem;
+    letter-spacing: .75rem;
     font-size: 1.25rem;
+    color: hsl(186, 14%, 43%);
 }
+
+/* MAIN CONTAINER CSS */
+/* ****************** */
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 35px;
+}
+
+.grey-heading {
+    color: hsl(186, 14%, 43%);
+}
+
+.bill-container {
+    margin-bottom: 25px;
+}
+
+.sm-heading {
+    font-size: 13px;
+}
+
+.input-container {
+    display: flex;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    width: 75%;
+    background: none;
+    text-align: right;
+    font-size: 24px;
+    font-family: inherit;
+    color: hsl(183, 100%, 15%);
+}
+
+input:focus {
+    outline: none;
+}
+
+label img{
+    width: 10px;
+}
+
+/* flex container CSS */
