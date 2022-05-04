@@ -21,6 +21,10 @@ header {
     max-height: 200px
 }
 
+button {
+    cursor: pointer;
+}
+
 .cool-heading {
     text-transform: uppercase;
     letter-spacing: .75rem;
@@ -39,6 +43,7 @@ header {
 
 .grey-heading {
     color: hsl(186, 14%, 43%);
+    margin-bottom: 10px;
 }
 
 .bill-container {
@@ -46,7 +51,7 @@ header {
 }
 
 .sm-heading {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .input-container {
@@ -74,7 +79,64 @@ input:focus {
 }
 
 label img{
-    width: 10px;
+    width: 12px;
 }
 
 /* flex container CSS */
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 15px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.flex-item button{
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    font-size: 24px;
+    color: white;
+    padding: 7px 0px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button.custom-btn {
+    background-color: hsl(180, 53%, 93%);
+    color: hsl(186, 14%, 43%);
+}
+
+/* tip amount and results CSS */
+.results-container {
+    background-color: hsl(183, 100%, 15%);
+    padding: 35px 15px 15px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.result .amount {
+    color: hsl(172, 67%, 45%);
+    font-size: 24px;
+}
+
+.result p {
+    color: hsl(189, 41%, 97%);
+    font-size: .85rem;
+}
+
+.sm-txt {
+    font-size: .90em;
+    color: hsl(186, 14%, 43%);
+}
+
+.attribution {
+    font-size: .75rem;
+    margin-top: 40px;
+}

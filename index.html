@@ -31,6 +31,9 @@
         <button class="percentage">5%</button>
       </div>
       <div class="flex-item">
+        <button class="percentage">10%</button>
+      </div>
+      <div class="flex-item">
         <button class="percentage">15%</button>
       </div>
       <div class="flex-item">
@@ -40,22 +43,24 @@
         <button class="percentage">50%</button>
       </div>
       <div class="flex-item">
-        <button class="percentage">Custom</button>
+        <button class="percentage custom-btn">Custom</button>
       </div>
     </div>
     <div class="num-people-container">
       <p class="grey-heading sm-heading">Number of People</p>
-      <label for="people"></label>
-      <input type="number">
+      <div class="input-container">
+        <label for="people"><img src="images/icon-person.svg" alt=""></label>
+        <input type="number">
+      </div>
     </div>
     <div class="results-container">
       <div class="result">
-        <p>Tip Amount / <span class="sm-txt">person</span></p>
-        <span class="tip-amount"></span>
+        <p>Tip Amount <br><span class="sm-txt">/ person</span></p>
+        <span id="tip" class="amount">$5.00</span>
       </div>
       <div class="result">
-        <p>Total / <span class="sm-txt">person</span></p>
-        <span class="total"></span>
+        <p>Total <br><span class="sm-txt">/ person</span></p>
+        <span id="total" class="amount">$300</span>
       </div>
       <button class="reset">Reset</button>
     </div>
@@ -63,7 +68,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Adam</a>.
   </div>
 
   <script src="script.js"></script>
