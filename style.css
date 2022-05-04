@@ -8,4 +8,19 @@
 
 body {
     font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    max-height: 200px
+}
+
+.cool-heading {
+    text-transform: uppercase;
+    letter-spacing: .45rem;
+    font-size: 1.25rem;
 }

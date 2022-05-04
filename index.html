@@ -11,46 +11,52 @@
 </head>
 
 <body>
-  <h1 class="cool-heading">spli</h1>
-  <h1 class="cool-heading">tter</h1>
-  <div class="bill-container">
-    <p class="grey-heading">Bill</p>
-    <label for="bill-input"></label>
-    <input type="text">
-  </div>
-  <p class="grey-heading">Select Tip %</p>
-  <div class="flex-container">
-    <div class="flex-item">
-      <button class="percentage">5%</button>
+  <header>
+    <div class="cool-heading-container">
+      <h1 class="cool-heading">spli</h1>
+      <h1 class="cool-heading">tter</h1>
     </div>
-    <div class="flex-item">
-      <button class="percentage">15%</button>
+  </header>
+  <div class="container">
+    <div class="bill-container">
+      <p class="grey-heading">Bill</p>
+      <label for="bill-input"></label>
+      <input type="text">
     </div>
-    <div class="flex-item">
-      <button class="percentage">25%</button>
+    <p class="grey-heading">Select Tip %</p>
+    <div class="flex-container">
+      <div class="flex-item">
+        <button class="percentage">5%</button>
+      </div>
+      <div class="flex-item">
+        <button class="percentage">15%</button>
+      </div>
+      <div class="flex-item">
+        <button class="percentage">25%</button>
+      </div>
+      <div class="flex-item">
+        <button class="percentage">50%</button>
+      </div>
+      <div class="flex-item">
+        <button class="percentage">Custom</button>
+      </div>
     </div>
-    <div class="flex-item">
-      <button class="percentage">50%</button>
+    <div class="num-people-container">
+      <p class="grey-heading">Number of People</p>
+      <label for="people"></label>
+      <input type="number">
     </div>
-    <div class="flex-item">
-      <button class="percentage">Custom</button>
+    <div class="results-container">
+      <div class="result">
+        <p>Tip Amount / <span class="sm-txt">person</span></p>
+        <span class="tip-amount"></span>
+      </div>
+      <div class="result">
+        <p>Total / <span class="sm-txt">person</span></p>
+        <span class="total"></span>
+      </div>
+      <button class="reset">Reset</button>
     </div>
-  </div>
-  <div class="num-people-container">
-    <p class="grey-heading">Number of People</p>
-    <label for="people"></label>
-    <input type="number">
-  </div>
-  <div class="results-container">
-    <div class="result">
-      <p>Tip Amount / <span class="sm-txt">person</span></p>
-      <span class="tip-amount"></span>
-    </div>
-    <div class="result">
-      <p>Total / <span class="sm-txt">person</span></p>
-      <span class="total"></span>
-    </div>
-    <button class="reset">Reset</button>
   </div>
 
   <div class="attribution">
