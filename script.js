@@ -1,50 +1,51 @@
+// grab elements from DOM
 const billInput = document.getElementById('bill-input');
-const numPeopleInput = document.getElementById('people-input');
-const tipAmounts = document.querySelectorAll('.percentage');
-const fivePercent = document.getElementById('five-percent');
-const tenPercent = document.getElementById('ten-percent');
-const fifteenPercent = document.getElementById('fifteen-percent');
-const twentyFivePercent = document.getElementById('twentyfive-percent');
-const fiftyPercent = document.getElementById('fifty-percent');
-const customTip = document.getElementById('custom-btn');
-const customAmountContainer = document.querySelector('.custom-amount-container');
-const tip = document.getElementById('tip');
-const gridItems = document.querySelectorAll('.grid-item');
-const total = document.getElementById('total');
+const checkPercentageBoxes = document.querySelectorAll('.percentage');
+const inputPercent = document.querySelector('#custom-amount');
+const inputPeople = document.getElementById('people-input');
+const inputs = document.querySelectorAll('input');
+const customTipContainer = document.querySelector('.custom-amount-container');
+const customTipBtn = document.querySelector('#custom-btn');
+const showTip = document.querySelector('.tip-result');
+const showTotal = document.querySelector('.total-result');
 
-total.innerHTML = 0;
-tip.innerHTML = 0;
+billInput.value = 0;
+inputPeople.value = 1;
 
-function calculateTip() {
-    let amount = 0;
-    for (let i = 0; i < tipAmounts.length; i++) {
-        tipAmounts[i].addEventListener('click', () => {
-            amount = tipAmounts[i].innerHTML;
-            // console.log(amount);
-            tip.innerHTML = (billInput.value * (amount * .01)).toFixed(2);
-            total.innerHTML = '$' + ((parseFloat(billInput.value) + parseFloat(tip.innerHTML)).toFixed(2));
-        });
+// event listeners for buttons and inputs
+let billAmount, numPeople, customPercent, tipTotal, tipPerPerson, totalPerPerson;
+let percentage = 0;
+
+checkPercentageBoxes.forEach(percentBtn => {
+    percentBtn.addEventListener('click', () => {  
+        if (percentBtn.checked) {
+            percentage = percentBtn.value * .01;
+            console.log(percentage);
+        }    
+    })
+});
+customTipBtn.addEventListener('click', () => {
+    customTipContainer.classList.toggle('toggle-custom-amount-container');
+    customTipBtn.classList.toggle('toggle-selected');
+});
+billInput.addEventListener('keyup', () => {
+    billAmount = Number(billInput.value);
+});
+inputPeople.addEventListener('change', () => {
+    if (inputPeople.value == 0) {
+        numPeople = inputPeople.value = 1;
     }
-}
-
-tipAmounts.forEach(tip => {
-    tip.addEventListener('click', () => {
-        tipAmounts.forEach(tip => {
-            tip.classList.contains('toggle-selected');
-            tip.classList.remove('toggle-selected');
-            customAmountContainer.classList.remove('toggle-custom-amount-container');
-        });
-        tip.classList.toggle('toggle-selected');
-    });
-
-    calculateTip();
+    numPeople = Number(inputPeople.value);
 });
-customTip.addEventListener('click', () => {
-    customAmountContainer.classList.toggle('toggle-custom-amount-container');
-    tipAmounts.forEach(tip => {
-        tip.classList.contains('toggle-selected');
-        tip.classList.remove('toggle-selected');
-    });
-});
+
+inputs.forEach(input => {
+    input.addEventListener('change', () => {
+        let tip = billAmount * percentage;
+        let total = tip + billAmount;
+        showTip.textContent = (tip / numPeople).toFixed(2);
+        showTotal.textContent = (billAmount + tip / numPeople).toFixed(2);
+    })
+})
+
 
 
